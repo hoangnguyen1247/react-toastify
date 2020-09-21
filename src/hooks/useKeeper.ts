@@ -7,11 +7,11 @@ import { useRef, useEffect } from 'react';
  * If refresh is set to true. The ref will be updated every render
  */
 export function useKeeper<T>(arg: T, refresh = false) {
-  const ref = useRef<T>(arg);
+    const ref = useRef<T>(arg);
 
-  useEffect(() => {
-    if (refresh) ref.current = arg;
-  });
+    useEffect(() => {
+        if (refresh) ref.current = arg;
+    });
 
-  return ref.current;
+    return ref.current;
 }
